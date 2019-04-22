@@ -101,7 +101,7 @@ class Nodeinfo_2_0Action extends ApiAction
                 $protocols[] = 'xmpp';
             }
         }
-        Event::handle('EndNodeInfoProtocols', array(&$protcols));
+        Event::handle('EndNodeInfoProtocols', array(&$protocols));
 
         return $protocols;
     }
