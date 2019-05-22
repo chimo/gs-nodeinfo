@@ -23,7 +23,17 @@
  * @link      https://www.gnu.org/software/social/
  */
 
-define('INSTALLDIR', realpath(__DIR__ . '/../../..'));
+// GNU social INSTALLDIR if we're in /plugins/WebSockets/daemon
+$dir = realpath(__DIR__ . '/../../..');
+
+// GNU social INSTALLDIR if we're in /local/plugins/WebSockets/daemon
+// NOTE: False positive if the root folder of the GS install is
+//       called 'local', I guess
+if (preg_match('/\/local$/', $dir) === 1) {
+    $dir = realpath($dir . '/..');
+}
+
+define('INSTALLDIR', $dir);
 
 $longoptions = ['type='];
 
