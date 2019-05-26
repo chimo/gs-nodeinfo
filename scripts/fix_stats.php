@@ -23,10 +23,10 @@
  * @link      https://www.gnu.org/software/social/
  */
 
-// GNU social INSTALLDIR if we're in /plugins/WebSockets/daemon
+// GNU social INSTALLDIR if we're in /plugins/Nodeinfo/scripts
 $dir = realpath(__DIR__ . '/../../..');
 
-// GNU social INSTALLDIR if we're in /local/plugins/WebSockets/daemon
+// GNU social INSTALLDIR if we're in /local/plugins/Nodeinfo/scripts
 // NOTE: False positive if the root folder of the GS install is
 //       called 'local', I guess
 if (preg_match('/\/local$/', $dir) === 1) {
